@@ -41,7 +41,8 @@ flowers = [
 ]
 @app.route('/')
 def index():
-    return render_template("index.html",flowers = Flower.objects())
+    # return render_template("index.html",flowers = Flower.objects())
+    return "Hi"
 
 @app.route("/images/<image_name>")
 def image(image_name):
