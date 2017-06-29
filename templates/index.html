@@ -20,8 +20,8 @@
 {#<a href="{{ url_for("add", a=4, b=5) }}">Bốn cộng năm bằng</a>#}
 
 {% for flower in flowers %}
-
-    <img src="{{ flower.image }}" alt="">
+{##}
+{#    <img src="{{ flower.image }}" alt="">#}
     <h3>{{ flower.title }}</h3>
     <p>{{ flower.price }}</p>
 {% endfor %}
