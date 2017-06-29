@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{#title, image, price#}
+    <form action="{{ url_for("add_flower") }}" method="post", enctype="multipart/form-data">
+        <p>Title</p>
+        <input type="text" name="title">
+        <p>Images</p>
+        <input type="file" name="images">
+        <p>Price</p>
+        <input type="float" name="price">
+        <input type="submit" name="submit">
+    </form>
+
+</body>
+</html>
