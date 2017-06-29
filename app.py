@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 mlab.connect()
 
-app.config["IMG_PATH"] = os.path.join(app.root_path, "images")
+app.config["IMG_PATH"] = os.path.join(app.root_path, "static", "images")
 
 class Flower(Document):
     image = StringField()
@@ -43,7 +43,7 @@ flowers = [
 def index():
     return render_template("index.html",flowers = Flower.objects())
 
-@app.route("/image/<image_name>")
+@app.route("/images/<image_name>")
 def image(image_name):
     return send_from_directory(app.config["IMG_PATH"], image_name)
 
